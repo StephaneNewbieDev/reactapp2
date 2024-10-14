@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 
 function App() {
   return (
@@ -22,4 +25,19 @@ function App() {
   );
 }
 
+function MyButton() {
+  return <Button variant="primary">Cliquer ici</Button>;
+}
+
+import axios from 'axios';
+
+useEffect(() => {
+  axios.get('https://api.github.com/users/github-john-doe')
+    .then(response => {
+      // Traiter la réponse
+    })
+    .catch(error => {
+      // Gérer les erreurs
+    });
+}, []);
 export default App;
